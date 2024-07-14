@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "2b47b362-c3af-4a10-982d-10c269c8a056",
+		"name": "Route Tech Summit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29782867"
+	},
+	"item": [
+		{
+			"name": "User End Points",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"omar\",\r\n    \"email\":\"omakobro567@gmail.com\",\r\n    \"password\":\"omar#123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"omakobro567@gmail.com\",\r\n    \"password\":\"omar#123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4MDk2OCwiZXhwIjoxNzIxMDUzNzY4fQ.sIQV2YF8btsypoO2YzO7KTdSQk1mQQPbihh5yV3x7sU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users/getUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"getUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category End Points",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODI5NywiZXhwIjoxNzIxMDYxMDk3fQ.O0Acvohcxc-L6XmOinOBJVUtlLUJIqo1xoaY7-FGr7w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"sports\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/createCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"createCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTJhOGVmMTUyZDdjZTc5NDlhZmUzNCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvMTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODQwNywiZXhwIjoxNzIxMDYxMjA3fQ.LLrklwVzkr-Jm0QTeMeyNANnwvSbUy2sqWHrM_utxZE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/getUserCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"getUserCategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODgwOCwiZXhwIjoxNzIxMDYxNjA4fQ.krclTRL9pS8euaFdc2x-V8LEI7lkjCpVPQi3FTimY4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryName\":\"Shopping After Update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/updateCategory/6692ab8dfa8c9b8acfcc01db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"updateCategory",
+								"6692ab8dfa8c9b8acfcc01db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg5MTE2MywiZXhwIjoxNzIxMDYzOTYzfQ.FaQC8Qh7vAjrFG43OOsP2c23bQ6IcRJCrKKzMWY1CTY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/categories/deleteCategory/6692ab8dfa8c9b8acfcc01db",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								"deleteCategory",
+								"6692ab8dfa8c9b8acfcc01db"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task End Points",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDkwNTczNiwiZXhwIjoxNzIxMDc4NTM2fQ.Jm8v81znCpGZyH6qvMzmol_SBkd9PQHXLKUl8sBe_hw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\":\"6692ab86fa8c9b8acfcc01d5\",\r\n    \"type\":\"Text\",\r\n    \"body\":\"Check Private\",\r\n    \"shared\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/createTask",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"createTask"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDkwNzU1OSwiZXhwIjoxNzIxMDgwMzU5fQ.iV1DyDEtXCd3WDtfHL_mS4ZxegLYsKgNxPz-jqtT_lk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/getTasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"getTasks"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "shared asc",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "body",
+									"value": "hello",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Tasks For Unauthenticated Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTJhOGVmMTUyZDdjZTc5NDlhZmUzNCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvMTIzQGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODQwNywiZXhwIjoxNzIxMDYxMjA3fQ.LLrklwVzkr-Jm0QTeMeyNANnwvSbUy2sqWHrM_utxZE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks//Tasks-Puplic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"",
+								"Tasks-Puplic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODgwOCwiZXhwIjoxNzIxMDYxNjA4fQ.krclTRL9pS8euaFdc2x-V8LEI7lkjCpVPQi3FTimY4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\":\"6692ab86fa8c9b8acfcc01d5\",\r\n    \"type\":\"List\",\r\n    \"body\":[\"Check Private after update\", \"after update to a list\"],\r\n    \"shared\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/updateTask/6692f5b11025f68e756e5fba",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"updateTask",
+								"6692f5b11025f68e756e5fba"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "accesstoken_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OTI4OTkwYWY3YzFmZDg1YzY4NDAyMCIsInVzZXJFbWFpbCI6Im9tYWtvYnJvNTY3QGdtYWlsLmNvbSIsImlhdCI6MTcyMDg4ODgwOCwiZXhwIjoxNzIxMDYxNjA4fQ.krclTRL9pS8euaFdc2x-V8LEI7lkjCpVPQi3FTimY4A",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tasks/deleteTask/6692f0232a95bfb316ecaa6d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"deleteTask",
+								"6692f0232a95bfb316ecaa6d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
